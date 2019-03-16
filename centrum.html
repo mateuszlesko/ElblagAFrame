@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+
+ <meta charset="utf-8">
+ <title>Links</title>
+ <meta name="description" content="Motion Capture Components – A-Frame">
+ <script src="aframe-0.9.0/dist/aframe-master.js"></script>
+ <script src="aframe-0.9.0/examples/js/vendor/LegacyJSONLoader.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/aframe-tooltip-component.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/camera-position.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/ground.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+ <script src="aframe-0.9.0/examples/test/shaders/skyGradient.js"></script>
+    </head>
+              <body>
+                    <a-scene raycaster="far: 600; objects: [link];" cursor="rayOrigin: mouse" camera-position>
+                            <a-assets>
+                              <!--<img id="arena" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/aframeArena.png">-->
+                             <!--
+                              <img id="thumbCity" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/city.png">
+                              <img id="thumbSunrise" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
+                              <img id="thumbMountains" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/mountains.png">
+                              -->
+                              <img id="mozvr" src="aframe-0.9.0/examples/assets/img/mozvr.png">
+                              <img id="shadow2" src="aframe-0.9.0/examples/assets/img/radial-shadow-2.png">
+                              
+                              <img id="ui3" src="zdj/tysiaclecia.png">
+                              <img id='ui4' src= "zdj/grunwaldzka.png">
+                            </a-assets>
+                            
+                            <a-curvedimage id='link' value='1' src="#ui3" radius="5.7" theta-length="180" height="9"
+                            rotation="0 90 0" scale="1.2 1.2 1.2"></a-curvedimage>
+                            <a-curvedimage id='link' value='1' src="#ui4" radius="5.7" theta-length="180" height="9"
+                            rotation="0 -90 0" scale="1.2 1.2 1.2"></a-curvedimage>
+                          
+                            
+                            <a-entity id="sky"
+                                      geometry="primitive: sphere; radius: 65;"
+                                      material="shader: flat; color: white; side: double"></a-entity>
+                            
+                            <a-entity id="leftHand" link-controls="hand: left"></a-entity>
+                            <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+                          
+                          </a-scene>
+                <script src="gallery360.js"></script>
+              </body>
+</html>
