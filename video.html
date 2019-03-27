@@ -13,11 +13,31 @@
  <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/ground.js"></script>
  <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/link-controls.js"></script>
  <script src="aframe-0.9.0/examples/test/shaders/skyGradient.js"></script>
-    </head>
+ <style>
+  #play-btn {
+  position: fixed;
+  top: calc(50% - 1em);
+  left: calc(50% - 2em);
+  width: 4em;
+  height: 2em;
+  z-index: 10;
+}
+ </style>
+</head>
               <body>
-               <a-scene>
+               <script>
+                var vid = document.getElementById('penguin-sledding');
+               document.getElementById('play-btn').addEventListener("click", function(e){
+                 this.style.display = 'none';
+                 vid.play();
+               }, false);
+                
+               </script>
+               <button id="play-btn">Play</button>
+               <a-scene id="vr-scene">
                   <a-assets>
-                    <video id="penguin-sledding" autoplay='True' loop="false" material.repeat='None' src="Elblag1945.mp4">
+                    <video id="penguin-sledding" autoplay='false' loop="false" crossOrigin="anonymous" 
+                     material.repeat='None' src="Elblag1945.mp4">
                   </a-assets>
                 
                   <!-- Using the asset management system. -->
