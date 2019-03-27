@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+
+ <meta charset="utf-8">
+ <title>Links</title>
+ <meta name="description" content="Motion Capture Components – A-Frame">
+ <script src="aframe-0.9.0/dist/aframe-master.js"></script>
+ <script src="aframe-0.9.0/examples/js/vendor/LegacyJSONLoader.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/aframe-tooltip-component.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/camera-position.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/ground.js"></script>
+ <script src="aframe-0.9.0/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+ <script src="aframe-0.9.0/examples/test/shaders/skyGradient.js"></script>
+    </head>
+              <body>
+               <a-scene>
+                  <a-assets>
+                    <video id="penguin-sledding" autoplay='False' loop="false" material.repeat='None' src="film/Elblag1945.mp4">
+                  </a-assets>
+                
+                  <!-- Using the asset management system. -->
+                  <a-video src="#penguin-sledding" width="26" height="15" position="0 0 -20"></a-video>
+                
+                  <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+                 
+                </a-scene>    
+              </body>
+</html>
